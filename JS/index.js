@@ -84,7 +84,7 @@ function getPic(productsEl, productsResp) {
             if (response.hits.length > 1)
                 pictureLink = response.hits[Math.floor(Math.random() * 3)].webformatURL;
             productsEl.append(`
-            <div class="product card mx-3 my-0 h-25" data-id="${productsResp._id}" style="width:20%;">
+            <div class="product card mx-3 my-0 h-25 w-25" data-id="${productsResp._id}">
                 <img src="${pictureLink}" class="card-img-top" alt="...">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${productsResp.name}</h5>
