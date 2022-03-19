@@ -4,7 +4,7 @@ $(function () {
     $("#products").on("click", ".btn-danger", handleDelete);
     $("#products").on("click", ".btn-warning", handleUpdate);
     $("#updateBtn").click(function () {
-        alert("Starting Sending Update");
+        // alert("Starting Sending Update");
         var id = $("#updateId").val();
         var name = $("#update-name").val();
         var color = $("#update-color").val();
@@ -22,7 +22,7 @@ $(function () {
                 alert("Success Sending Update");
                 // console.log(response);
                 loadProducts();
-                alert("Success Loading " + response);
+                // alert("Success Loading " + response);
                 $("#updateProductModal").modal("hide");
             }
         });
