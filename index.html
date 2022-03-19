@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./JS/jquery-3.6.0.min.js" defer></script>
+    <script src="./JS/bootstrap.min.js" defer></script>
+    <script src="./JS/index.js" defer></script>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Products API UI</title>
+</head>
+
+<body>
+    <div class="container py-3">
+        <h2 class="text-light">Products API Client</h3>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">Add
+                Product</button>
+
+            <div class="d-flex flex-row flex-wrap p-3 justify-content-center" id="products"></div>
+
+            <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-2">
+                                    <label for="product-name" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="product-name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="product-color" class="col-form-label">Color:</label>
+                                    <input type="text" class="form-control" id="product-color" required></input>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="product-price" class="col-form-label">Price:</label>
+                                    <input type="text" class="form-control" id="product-price" required></input>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="product-department" class="col-form-label">Department:</label>
+                                    <input type="text" class="form-control" id="product-department" required></input>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="product-description" class="col-form-label">Description:</label>
+                                    <textarea class="form-control" id="product-description" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-info" id="addBtn">Add Product</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Update Modal -->
+            <div class="modal fade" id="updateProductModal" tabindex="-1" aria-labelledby="updateProductModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="updateProductModalLabel">Update Product Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <input type="hidden" id="updateId" />
+                                <div class="mb-2">
+                                    <label for="update-name" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="update-name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update-color" class="col-form-label">Color:</label>
+                                    <input type="text" class="form-control" id="update-color" required></input>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update-price" class="col-form-label">Price:</label>
+                                    <input type="text" class="form-control" id="update-price" required></input>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update-department" class="col-form-label">Department:</label>
+                                    <input type="text" class="form-control" id="update-department" required></input>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update-description" class="col-form-label">Description:</label>
+                                    <textarea class="form-control" id="update-description" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-info" id="updateBtn">Update Record</button>
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</body>
+
+
+</html>

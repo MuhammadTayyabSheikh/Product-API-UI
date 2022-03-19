@@ -1,0 +1,8 @@
+body {
+	background: url(../bg_image.jpg) no-repeat center/cover fixed;
+}
+
+.card-img-top {
+	background-color: aquamarine;
+	
+}
