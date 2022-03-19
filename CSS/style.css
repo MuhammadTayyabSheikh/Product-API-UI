@@ -4,5 +4,11 @@ body {
 
 .card-img-top {
 	background-color: aquamarine;
-	
 }
+
+@media screen and (max-width: 48rem) {
+	.product {
+		min-width: 90vw;
+	}
+}
+/*  min-vw-25 mw-25 */
